@@ -1,0 +1,84 @@
+var zombie0 = document.getElementById("zombie0");
+var zombie1 = document.getElementById("zombie1");
+var zombie2 = document.getElementById("zombie2");
+var zombie3 = document.getElementById("zombie3");
+var zombie4 = document.getElementById("zombie4");
+var zombie5 = document.getElementById("zombie5");
+var zombie6 = document.getElementById("zombie6");
+var zombie7 = document.getElementById("zombie7");
+var zombie8 = document.getElementById("zombie8");
+var zombie9 = document.getElementById("zombie9");
+var zombie10 = document.getElementById("zombie10");
+var zombie11 = document.getElementById("zombie11");
+var zombie12 = document.getElementById("zombie12");
+var zombie13 = document.getElementById("zombie13");
+
+
+
+
+
+
+
+
+
+
+
+//idle
+{
+    var Zimage = 1;
+    var ZidleAnimatonStartNumber = 0;
+    function ZidleAnimaton() {
+
+        zombie.src = "anime/Zombie1/animation/Idle"+Zimage+".png";
+        Zimage++;
+        if (Zimage == 4){
+            Zimage = 1;
+        }
+    }
+    function ZidleAnimatonStart() {
+        ZidleAnimatonStartNumber = setInterval(ZidleAnimaton, 800);
+    }
+}
+
+//run
+
+{
+    var ZRimage = 1;
+    var ZrunAnimationStartNumber = 0;
+    function ZrunAnimation() {
+        zombie.src = "anime/Zombie1/animation/Run"+ZRimage+".png";
+        ZRimage++;
+        if (ZRimage == 10) {
+            ZRimage = 1;
+        }
+    }
+    function ZrunAnimationStart() {
+        ZrunAnimationStartNumber = setInterval(ZrunAnimation, 75);
+
+    }
+
+
+}
+//move
+var Zmarigin = 1500;
+var zombieMoveStartNumber = 0;
+function zombieMove(){
+    Zmarigin -= 5;
+    zombie.style.marginLeft = Zmarigin +"px";
+}
+function zombieMoveStart(){
+    zombieMoveStartNumber =setInterval(zombieMove,75);
+}
+//move back
+var zbombieMoveStartNumber = 0;
+var Zbmarigin = 1000;
+function zbombieMove(){
+    Zbmarigin += 5;
+    zombie.style.marginLeft = Zbmarigin +"px";
+}
+function zbombieMoveStart(){
+  zbombieMoveStartNumber  = setInterval(zbombieMove,75);
+}
+
+
+

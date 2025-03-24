@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Options</title>
+    <style>
+        body {
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: 20px;
+        }
+        .options {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .options label, .options select {
+            font-size: 1.2em;
+            margin: 10px;
+        }
+        .menu button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+            background: black;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        .menu button:hover {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Game Options</div>
+    <div class="options">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100">
+        <br>
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <div class="menu">
+        <button onclick="window.history.back()">Back</button>
+    </div>
+</body>
+</html>
